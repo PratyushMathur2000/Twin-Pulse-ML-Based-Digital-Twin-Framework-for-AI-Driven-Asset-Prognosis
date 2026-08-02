@@ -27,12 +27,13 @@ apply_theme()
 render_horizontal_navigation()
 
 # ===== DISPLAY PDF REPORT IN HORIZONTAL SLIDER =====
-render_pdf_horizontal("Presentation.pdf")  # Replace with your actual PDF filename
+pdf_path = str(Path(__file__).parent / "Presentation.pdf")
+render_pdf_horizontal(pdf_path)
 
 # ===== DEMO VIDEO PLAYER =====
 import os
 
-DEMO_VIDEO = "demo_compressed.mp4"
+DEMO_VIDEO = str(Path(__file__).parent / "demo_compressed.mp4")
 
 if os.path.exists(DEMO_VIDEO):
     st.markdown(
