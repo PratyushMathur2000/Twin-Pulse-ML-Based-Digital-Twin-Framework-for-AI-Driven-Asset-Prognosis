@@ -39,7 +39,9 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-MODEL_DIR = Path("saved_models")
+from pathlib import Path
+BASE_DIR = Path(__file__).parent.parent
+MODEL_DIR = BASE_DIR / "saved_models"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SENSOR COLUMN MAPPINGS  (CSV raw names  ↔  display/standard names)

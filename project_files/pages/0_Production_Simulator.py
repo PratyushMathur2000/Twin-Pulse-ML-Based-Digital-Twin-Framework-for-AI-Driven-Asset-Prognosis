@@ -97,7 +97,9 @@ if st.session_state["raw_df"] is None:
     if uploaded_file is not None:
         df_raw = pd.read_csv(uploaded_file)
     else:
-        default_file = "test_pump_digital_twin_synthetic_data.csv"
+        import os
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        default_file = os.path.join(BASE_DIR, "test_pump_digital_twin_synthetic_data.csv")
         if os.path.exists(default_file):
             df_raw = pd.read_csv(default_file)
             st.success(f"✅ Loaded sample dataset automatically ({default_file})")
@@ -212,7 +214,9 @@ total_steps = min_steps
 # -----------------------------
 # Initialize simulators
 # -----------------------------
-models_folder = "saved_models"
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+models_folder = os.path.join(BASE_DIR, "saved_models")
 
 col_reset, col_init = st.columns([1, 2])
 with col_reset:

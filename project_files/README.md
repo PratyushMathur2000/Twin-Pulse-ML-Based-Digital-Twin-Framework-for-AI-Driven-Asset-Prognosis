@@ -18,6 +18,15 @@ The system performs three core predictive functions, delivered through a compreh
 * **Digital Twin Sandbox:** Simulate maintenance interventions and compare baseline vs. intervention trajectories to evaluate the impact on risk evolution.
 * **AI Diagnostic Agent:** (Requires Local LLM / LM Studio) Synthesizes classification probabilities, risk scores, and RUL predictions into structured maintenance recommendations and interactive Q&A.
 
+## ☁️ How to Host on Streamlit Cloud (Important)
+If you are deploying this project on **Streamlit Community Cloud** directly from GitHub, you must update the entry point so it knows where to find the code:
+1. Go to your app's **Settings** (Click the `...` menu).
+2. Go to **General**.
+3. Change the **Main file path** to: `project_files/App.py`
+4. Click **Save**.
+
+The dashboard will automatically reboot, find the datasets, extract the models, and launch properly!
+
 ## 🛠️ Technology Stack
 * **Language:** Python
 * **Data Processing:** Pandas, NumPy
