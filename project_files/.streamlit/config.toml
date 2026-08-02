@@ -1,0 +1,19 @@
+# ===== ORIGINAL PINKISH THEME (COMMENTED OUT) =====
+# [theme]
+# primaryColor = "#667eea"
+# backgroundColor = "#f5f0ff"  # Light pastel base
+# secondaryBackgroundColor = "#ffffff"
+# textColor = "#1a1a2e"
+# font = "sans serif"
+
+# ===== DARK GRADIENT THEME (ACTIVE) =====
+[theme]
+primaryColor = "#667eea"
+backgroundColor = "#0a0a0a"  # Dark base matching presentation
+secondaryBackgroundColor = "#1a1a2e"  # Dark blue-purple
+textColor = "#f8fafc"  # Light text for dark background
+font = "sans serif"
+
+[client]
+showSidebarNavigation = false
+toolbarMode = "minimal"
