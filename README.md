@@ -20,6 +20,8 @@ The system performs three core predictive functions, delivered through a compreh
 
 ## ☁️ Run on Streamlit Cloud
 
+[twin-pulse-ml-based-digital-twin-for-ai-driven-asset-prognosis](https://twin-pulse-ml-based-digital-twin-for-ai-driven-asset-prognosis.streamlit.app/Digital_Twin_Sandbox)
+
 ## 🛠️ Technology Stack
 * **Language:** Python
 * **Data Processing:** Pandas, NumPy
