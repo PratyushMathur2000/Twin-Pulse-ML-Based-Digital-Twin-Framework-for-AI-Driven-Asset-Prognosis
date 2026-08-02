@@ -1,4 +1,17 @@
 import streamlit as st
+import os
+import zipfile
+from pathlib import Path
+
+# Ensure model is unzipped (required for Streamlit Cloud)
+MODEL_DIR = Path(__file__).parent / "saved_models"
+MODEL_PKL = MODEL_DIR / "health_stage_ensemble.pkl"
+MODEL_ZIP = MODEL_DIR / "health_stage_ensemble.zip"
+
+if not MODEL_PKL.exists() and MODEL_ZIP.exists():
+    with zipfile.ZipFile(MODEL_ZIP, 'r') as zip_ref:
+        zip_ref.extractall(MODEL_DIR)
+
 from utils.themes import apply_theme
 from utils.navigation import render_horizontal_navigation
 from utils.pdf_viewer import render_pdf_horizontal
